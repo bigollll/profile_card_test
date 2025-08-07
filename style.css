@@ -1,0 +1,260 @@
+
+:root {
+  --cor-button: #cbb24d;
+  --cor-button-hover: #b49a4c;
+  --cor-progress-skills: #35497c;
+  --cor-box-shadow: rgba(0, 0, 0, 0.15);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px var(--cor-box-shadow);
+  max-width: 450px;
+  width: 100%;
+  padding: 1rem;
+  position: relative;
+}
+
+.badge {
+  background: #fff;
+  color: #888;
+  font-size: 12px;
+  padding: 0.2rem 0.6rem 0.2rem 0.7rem;
+  border-radius: 999px;
+  font-weight: 500;
+  position: absolute;
+  top: -15px;
+  box-shadow: 0px -2px 5px var(--cor-box-shadow);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.badge p {
+  margin: auto;
+}
+
+.shield {
+  height: 100%;
+  width: 13px;
+}
+
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.left-section {
+  display: flex;
+  gap: 15px;
+}
+
+.image-container {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.profile {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.flag {
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  bottom: 7px;
+  right: 7px;
+  border-radius: 50%;
+}
+
+.info .name {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #c2b183;
+  margin: 0 0 0.2rem 0;
+}
+
+.info .title,
+.info .company {
+  margin: 0;
+  color: #b4b4b4;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.skills {
+  font-weight: bold;
+  color: var(--cor-progress-skills);
+  margin: 0px 0px;
+  font-size: 0.9rem;
+}
+
+.progress-container {
+  flex-direction: row;
+  height: 10px;
+  width: 75%;
+  background: #e0e0e0;
+  border-radius: 5px;
+}
+
+.progress-bar {
+  height: 100%;
+  background: var(--cor-progress-skills);
+  border-radius: 5px;
+}
+
+.right-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.logo {
+  width: 90px;
+  height: auto;
+  border: 1px solid rgba(211, 211, 211);
+  border-radius: 4px;
+}
+
+.logo:hover {
+  width: 100px;
+  transition: 0.3s;
+}
+
+.favoritar {
+  height: auto;
+  width: 30px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.ativo {
+  background-image: url("/icons/star-ativo.svg");
+  width: 32px;
+  transition: 0.5s;
+}
+
+.match-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.match {
+  font-size: 1.1rem;
+  margin-left: 10px;
+}
+
+.match span {
+  font-weight: bold;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.5fr;
+  grid-gap: 0.5em;
+  margin-top: 10px;
+  position: relative;
+}
+
+button {
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.balao {
+  position: absolute;
+  height: 100%;
+  width: 25px;
+  right: 65px;
+  top: 0px;
+}
+
+/* Reusáveis */
+.btn {
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-outline {
+  background: white;
+  border: 1.5px solid var(--cor-button);
+  color: var(--cor-button);
+}
+
+.btn-outline:hover {
+  border-color: var(--cor-button-hover);
+  color: var(--cor-button-hover);
+}
+
+.btn-solid {
+  background: var(--cor-button);
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 1.5rem 1rem 3rem;
+}
+
+.btn-solid:hover {
+  background: var(--cor-button-hover);
+}
+
+@media (max-width: 550px) {
+  .actions {
+    display: flex;
+    flex-direction: column;
+  }
+  .balao {
+    display: none;
+  }
+  .card-content {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .left-section {
+    align-items: center;
+    flex-direction: column;
+  }
+  .info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .right-section{
+    align-items: center;
+  }
+  .btn-solid{
+    padding: 1rem 1.5rem 1rem 1.5rem !important;
+  }
+}
